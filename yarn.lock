@@ -981,6 +981,16 @@
   version "10.12.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-10.12.1.tgz#da61b64a2930a80fa708e57c45cd5441eb379d5b"
 
+"@types/node@>6":
+  version "12.0.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.7.tgz#4f2563bad652b2acb1722d7e7aae2b0ff62d192c"
+  integrity sha512-1YKeT4JitGgE4SOzyB9eMwO0nGVNkNEsm9qlIt1Lqm/tG2QEiSMTD4kS3aO6L+w5SClLVxALmIBESK6Mk5wX0A==
+
+"@types/node@^11.10.5":
+  version "11.13.13"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.13.13.tgz#a3d2a8a908ce322f24f0f8c88160b44c7dd5c452"
+  integrity sha512-GFWH7e4Q/OGLAO545bupVju+nE1YtLSwYAdLfSzAXnTPqoqKoXCOEtB7Cluvg9B/h2nGLhyzCDyCInYvrOE2nw==
+
 "@types/node@^8.0.24":
   version "8.10.36"
   resolved "https://registry.npmjs.org/@types/node/-/node-8.10.36.tgz#eac05d576fbcd0b4ea3c912dc58c20475c08d9e4"
@@ -7069,7 +7079,7 @@ listr-update-renderer@^0.4.0:
     figures "^1.7.0"
     indent-string "^3.0.0"
     log-symbols "^1.0.2"
-    log-update "^2.3.0"
+    log-update "^1.0.2"
     strip-ansi "^3.0.1"
 
 listr-verbose-renderer@^0.4.0:
@@ -7688,6 +7698,11 @@ nan@^2.10.0, nan@^2.9.2:
   version "2.11.1"
   resolved "https://registry.npmjs.org/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
 
+nan@^2.13.2:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
+  integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
+
 nanoid@^0.2.2:
   version "0.2.2"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-0.2.2.tgz#e2ebc6ad3db5e0454fd8124d30ca39b06555fe56"
@@ -7711,6 +7726,13 @@ nanomatch@^1.2.9:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+native-node-utils@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/native-node-utils/-/native-node-utils-0.1.7.tgz#9de38af402c74749be75b1fcb5eae0658a1db3a8"
+  integrity sha512-Jl8WwXWpc+CQfuTgThW5xUyLn0+hNQg+JQ3w1KTnWskJqX0WA7b6jO9fbcmldTZJpimygOW6I6HtkpYdCnnwTQ==
+  dependencies:
+    nan "^2.13.2"
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -7965,7 +7987,7 @@ npm-which@^3.0.1:
     npm-path "^2.0.2"
     which "^1.2.10"
 
-"npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
+"npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2, npmlog@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/npmlog/-/npmlog-4.1.2.tgz#08a7f2a8bf734604779a9efa4ad5cc717abb954b"
   dependencies:
@@ -8122,6 +8144,25 @@ onetime@^2.0.0, onetime@^2.0.1:
 opencollective-postinstall@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/opencollective-postinstall/-/opencollective-postinstall-2.0.1.tgz#798e83e168f7b91949061c2683f762af747f17cc"
+
+opencv-build@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/opencv-build/-/opencv-build-0.1.3.tgz#059daf3b82e9d43b528d47e43bde0efe24ebb0cc"
+  integrity sha512-eKivO37jg204v3yeaxmGXlm4JjsMal3Oc4LQwosS7pPB5JKEXqG9TRk5GSCqnCtgcIL5qfjGBz/wwYTF7VZGFg==
+  dependencies:
+    "@types/node" "^11.10.5"
+    npmlog "^4.1.2"
+
+opencv4nodejs@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/opencv4nodejs/-/opencv4nodejs-4.17.0.tgz#a11b4c64007c759d08e85a27df92cc962a2fa2fd"
+  integrity sha512-p5iKEX0N/VxpveGDeHNMJJwjWd5ggzSVgIqUKCCE8aUDgGIXdZWfZGHA37cS9y2hLVjkI3pvHMVwnm0W1me5Vw==
+  dependencies:
+    nan "^2.13.2"
+    native-node-utils "^0.1.7"
+    opencv-build "^0.1.3"
+  optionalDependencies:
+    "@types/node" ">6"
 
 opener@^1.5.1:
   version "1.5.1"
